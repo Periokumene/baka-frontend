@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通讯录 测试</title>
+</head>
+
+
+<style>
+  .main-title{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #phone-sheet{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  th, td{
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+  }
+  th{
+    background-color: lightgray;
+  }
+</style>
+
+<body>
+  <h1 class="main-title"> This is a telephone number sheet</h1>
+  <button onclick="rowAdd()">AddRow</button>
+  <br>
+  <br>
+
+  <table id="phone-sheet">
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Action</th>
+    </tr>
+
+    <tr>
+      <td>Alice</td>
+      <td>123-456-7890</td>
+      <td>
+        <button onclick="rowEdit(this)">Edit</button>
+        <button onclick="rowRemove(this)">Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <script src="./js/phone-sheet.js"></script>
+</body>
+
+
+</html>
