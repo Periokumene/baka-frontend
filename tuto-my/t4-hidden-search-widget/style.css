@@ -1,0 +1,65 @@
+
+body{
+    background-color: royalblue;
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    position: relative;
+
+    height: 50px;
+    border-radius: 25px;
+
+    background-color: #fff;
+    border: 0;
+
+    font-size: 18px;
+}
+
+.search-input{
+    height: 50px;
+    border-radius: 25px;
+    border: 0;
+    padding: 10px;
+
+    background-color: #fff;
+    font-size: 18px;
+    width: 50px;
+    transition: width 0.3s ease;
+
+    text-align: right;
+}
+
+.btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    border: 0;
+
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    padding: 35px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    font-size: 50px;
+}
+
+.fa-search{
+    position: absolute;
+    top: 12.5px;
+    left: 12.5px;
+}
+
+
+.search.active .search-input{
+    width: 200px;
+}

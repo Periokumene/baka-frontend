@@ -1,0 +1,54 @@
+
+body{
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*margin: 0;*/
+}
+
+.main-border{
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+}
+
+.panel{
+    flex: 1;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    height: 80vh;
+    margin: 10px;
+    border: 1px solid black;
+
+    position: relative;
+    cursor: pointer;
+    transition: all 700ms ease-in;
+}
+.panel.active{
+    flex: 5;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+
