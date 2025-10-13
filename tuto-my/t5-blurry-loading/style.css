@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*width: 100vw;*/
+    height: 100vh;
+    overflow: hidden;
+}
+.bg{
+    background-image: url("https://tu.ltyuanfang.cn/api/fengjing.php");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /*!*position: absolute;*!*/
+    /*top: -30px;*/
+    /*left: -30px;*/
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    /*width: calc(100vw + 60px);*/
+    /*height: calc(100vh + 60px);*/
+
+    /*z-index: -1;*/
+    filter: blur(2px);
+}
+
+
+.text{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    color: #fff;
+}
