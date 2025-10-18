@@ -1,34 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
 
-function App() {
-  const [count, setCount] = useState(0)
+import './App.css';
+import Message from './Message';
+import ListGroup from './components/ListGroup';
+import Alert from './components/Alert';
+import Button from './components/Button/Button';
 
+import { BsFillCalendarFill } from 'react-icons/bs';
+import { TbCloverFilled } from "react-icons/tb";
+
+
+export default function App() {
+  const items = ["A", "B", "C"];
+  const genders = ["Male", "Female", "Other"];
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      <BsFillCalendarFill/>
+      <LoveButton/>
+      <div>Title</div>
+      <Alert>
+        <div>ALERT!</div>
+      </Alert>
+
+      <Button children={"HELL"}/>
+      <Button children={"HELL"}
+              color="info"
+              onClick={() => { alert("HELLO")}}
+      />
+      <Message />
+      <ListGroup
+        items={items}
+        heading='Cities'
+        postSelectedItem={(item:string)=>{ alert("CITIES: " + item)}}
+      />
+      <ListGroup
+        items={genders}
+        heading='Genders'
+        postSelectedItem={(item:string)=>{ alert("GENDERS: " + item)}}
+      />
+    </>
+  );
 }
 
-export default App
+function LoveButton(){
+  const [color, setColor] = useState('black');
+  function handleClick(){
+    setColor(color === 'black' ? 'red' : 'black');
+  }
+
+  return <TbCloverFilled size='100px' onClick={handleClick} color={color}/>
+}
+
+
+
