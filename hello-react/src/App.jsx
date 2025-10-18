@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import './App.css';
+import Game from './Game.jsx';
 
 
 const baseStyle = {
@@ -30,6 +31,10 @@ function App(){
         <h style={{...baseStyle, color: 'blue'}}>Hello</h>
         <p>this is a paper</p>
         <h1 className='text-lowercase'>World</h1>
+        <div>------------------------</div>
+        <Game/>
+        <br/>
+        <br/>
         <div>------------------------</div>
         <UserComponent
             title='Hello'
