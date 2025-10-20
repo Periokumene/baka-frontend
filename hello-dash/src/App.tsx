@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 
-import './App.css';
 import Message from './Message';
 import ListGroup from './components/ListGroup';
 import Alert from './components/Alert';
@@ -9,6 +8,12 @@ import Button from './components/Button/Button';
 
 import { BsFillCalendarFill } from 'react-icons/bs';
 import { TbCloverFilled } from "react-icons/tb";
+import Form from './components/Form';
+
+import 'bootstrap/dist/css/bootstrap.css'
+import './App.css';
+import { ExpenseCart } from './components/ExpenseCart';
+import EffectTest from './EffectTest';
 
 
 export default function App() {
@@ -16,6 +21,11 @@ export default function App() {
   const genders = ["Male", "Female", "Other"];
   return (
     <>
+      <EffectTest/>
+      <div>-------------------------------</div>
+      <ExpenseCart/>
+      <div>-------------------------------</div>
+      <Form/>
       <BsFillCalendarFill/>
       <LoveButton/>
       <div>Title</div>
